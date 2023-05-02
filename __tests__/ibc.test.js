@@ -16,7 +16,6 @@ describe("okb ibc test", async () => {
 
         const client = new OKBChainClient(serverUrl, {
             chainId: "okbchain-101",
-            relativePath: "/v1",
             isMainnet: false
         })
         const privateKey = crypto.getPrivateKeyFromMnemonic(mnemonic, '60')
@@ -33,7 +32,6 @@ describe("okb ibc test", async () => {
     it("ibc query denom_traces", async () => {
         const client = new OKBChainClient("http://127.0.0.1:10001", {
             chainId: "ibc-1",
-            relativePath: "/v1",
             isMainnet: false
         })
 
@@ -44,7 +42,6 @@ describe("okb ibc test", async () => {
     it("ibc query denom_trace", async () => {
         const client = new OKBChainClient("http://127.0.0.1:10001", {
             chainId: "ibc-1",
-            relativePath: "/v1",
             isMainnet: false
         })
 
@@ -55,7 +52,6 @@ describe("okb ibc test", async () => {
     it("ibc query parmas", async () => {
         const client = new OKBChainClient("http://127.0.0.1:10001", {
             chainId: "ibc-1",
-            relativePath: "/v1",
             isMainnet: false
         })
 
@@ -66,7 +62,6 @@ describe("okb ibc test", async () => {
     it("ibc query AllClientStates", async ()=> {
         const client = new OKBChainClient("http://127.0.0.1:10001", {
             chainId: "ibc-1",
-            relativePath: "/v1",
             isMainnet: false
         })
         const res = await client.queryAllClientStates()
@@ -76,7 +71,6 @@ describe("okb ibc test", async () => {
     it("ibc query clientState", async ()=> {
         const client = new OKBChainClient("http://127.0.0.1:10001", {
             chainId: "ibc-1",
-            relativePath: "/v1",
             isMainnet: false
         })
         const res = await client.queryClientStates('07-tendermint-0')
@@ -86,7 +80,6 @@ describe("okb ibc test", async () => {
     it( 'ibc query clientConnections', async ()=> {
         const client = new OKBChainClient("http://127.0.0.1:10001", {
             chainId: "ibc-1",
-            relativePath: "/v1",
             isMainnet: false
         })
         const res = await client.queryClientConnections('07-tendermint-0')
@@ -96,7 +89,6 @@ describe("okb ibc test", async () => {
     it( 'ibc query all connections', async ()=> {
         const client = new OKBChainClient("http://127.0.0.1:10001", {
             chainId: "ibc-1",
-            relativePath: "/v1",
             isMainnet: false
         })
 
@@ -107,7 +99,6 @@ describe("okb ibc test", async () => {
     it('ibc query connection', async ()=> {
         const client = new OKBChainClient("http://127.0.0.1:10001", {
             chainId: "ibc-1",
-            relativePath: "/v1",
             isMainnet: false
         })
 
@@ -118,7 +109,6 @@ describe("okb ibc test", async () => {
     it('query all channels', async ()=> {
         const client = new OKBChainClient("http://127.0.0.1:10001", {
             chainId: "ibc-1",
-            relativePath: "/v1",
             isMainnet: false
         })
 
@@ -130,7 +120,6 @@ describe("okb ibc test", async () => {
     it('query  channel', async ()=> {
         const client = new OKBChainClient("http://127.0.0.1:10001", {
             chainId: "ibc-1",
-            relativePath: "/v1",
             isMainnet: false
         })
 
@@ -141,7 +130,6 @@ describe("okb ibc test", async () => {
     it('queryPacketCommitments', async ()=> {
         const client = new OKBChainClient("http://127.0.0.1:10001", {
             chainId: "ibc-1",
-            relativePath: "/v1",
             isMainnet: false
         })
 
@@ -152,7 +140,6 @@ describe("okb ibc test", async () => {
     it('queryConnectionChannels', async ()=> {
         const client = new OKBChainClient("http://127.0.0.1:10001", {
             chainId: "ibc-1",
-            relativePath: "/v1",
             isMainnet: false
         })
 
@@ -163,7 +150,6 @@ describe("okb ibc test", async () => {
     it('query tx', async () => {
         const client = new OKBChainClient("http://127.0.0.1:36659", {
             chainId: "okbchain-101",
-            relativePath: "/v1",
             isMainnet: false
         })
         const res = await client.queryTx('D7702BCC93BC3CA3C16EB0F9B1F945D33D1860B931B78FDDB6F0517B120E5E91')
@@ -173,7 +159,6 @@ describe("okb ibc test", async () => {
     it('query txs', async ()=> {
         const client = new OKBChainClient("http://127.0.0.1:36659",{
             chainId: "okbchain-101",
-            relativePath: "/v1",
             isMainnet: false
         })
 
@@ -184,7 +169,6 @@ describe("okb ibc test", async () => {
     it("query header", async ()=>{
         const client = new OKBChainClient("http://127.0.0.1:36659", {
             chainId: "okbchain-101",
-            relativePath: "/v1",
             isMainnet: false
         },"http://127.0.0.1:36657",)
         const res = await client.queryHeader(1)

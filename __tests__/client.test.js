@@ -3,14 +3,12 @@ import * as crypto from "../src/crypto"
 
 
 
-// const mnemonic = "total lottery arena when pudding best candy until army spoil drill pool"
-// const privateKey_996 = "29892b64003fc5c8c89dc795a2ae82aa84353bb4352f28707c2ed32aa1011884"
-// const privateKey = "828e61f969a7369f3340b07dd2080740d8445d7f802899ddacf9bc4db8608997"
-// const from_996 = "ex1jjvpmgwwgs99nhlje3aag0lackunqgj7pcgnd4"
-// const from = "ex1ya7dn2rr8nx07tx9ksq8gvz5utvarrh0knjnjn"
+const mnemonic = "total lottery arena when pudding best candy until army spoil drill pool"
+const privateKey = "828e61f969a7369f3340b07dd2080740d8445d7f802899ddacf9bc4db8608997" // default cointype=60
+const from = "ex1ya7dn2rr8nx07tx9ksq8gvz5utvarrh0knjnjn" // 0x277CD9a8633ccCFF2Cc5B400743054e2d9d18eEf
 
 const serverUrl = "https://okbtestrpc.okbchain.org"
-const toAddress = "ex1ya7dn2rr8nx07tx9ksq8gvz5utvarrh0knjnjn"
+const toAddress = "ex1k9ef5me4u5gznx4uxq825lqp7vcw4p7agw966u" // 0xB1729A6f35E510299Abc300EAa7C01F330EA87Dd
 const chainId = "okbchaintest-195"
 const baseCoin = "okb"
 const testCoin = "xxb-781"
@@ -18,18 +16,17 @@ const testProduct = testCoin + "_" + baseCoin
 const testPoolName = "aaa-882_okb"
 
 
-const mnemonic = "bamboo dismiss pitch mass strategy advice example critic vapor series simple kitten"
-const privateKey = "828e61f969a7369f3340b07dd2080740d8445d7f802899ddacf9bc4db8608997"
-const from = "ex1vegcudd5ypa6j025w4tf6hspt0vr27ty5sy3l9"
+// const mnemonic = "bamboo dismiss pitch mass strategy advice example critic vapor series simple kitten"
+// const privateKey = "828e61f969a7369f3340b07dd2080740d8445d7f802899ddacf9bc4db8608997"
+// const from = "ex1vegcudd5ypa6j025w4tf6hspt0vr27ty5sy3l9" // 0x66518e35B4207ba93D5475569d5E015bd8357964
 
 
-describe("OKBChainClient test", async () => {
+describe("OKBChainClient test", () => {
 
 
   it("get balance", async () => {
     const client = new OKBChainClient(serverUrl, {
       chainId: chainId,
-      relativePath: "/v1",
       isMainnet: false
     })
     const privateKey = crypto.getPrivateKeyFromMnemonic(mnemonic, '60')
@@ -45,10 +42,9 @@ describe("OKBChainClient test", async () => {
     jest.setTimeout(10000)
     const client = new OKBChainClient(serverUrl, {
       chainId: chainId,
-      relativePath: "/v1",
       isMainnet: false
     })
-    const privateKey = crypto.getPrivateKeyFromMnemonic(mnemonic, '118')
+    const privateKey = crypto.getPrivateKeyFromMnemonic(mnemonic, '60')
     await client.setAccountInfo(privateKey)
     //console.log(client)
     const addr = crypto.getAddressFromPrivateKey(client.privateKey)
@@ -56,7 +52,7 @@ describe("OKBChainClient test", async () => {
     const account = await client.getAccount(addr)
     const sequence = parseInt((await client.getSequenceNumberFromAccountInfo(account)))
     // console.log(account, sequence)
-    const res = await client.sendSendTransaction(toAddress, "1.00000000", baseCoin, "hello world", sequence)
+    const res = await client.sendSendTransaction(toAddress, "0.10000000", baseCoin, "hello world", sequence)
     console.log(JSON.stringify(res))
     // expect(res.status).toBe(200)
   })
@@ -67,7 +63,6 @@ describe("OKBChainClient test", async () => {
     jest.setTimeout(10000)
     const client = new OKBChainClient("http://127.0.0.1:36659", {
       chainId: "okbchain-101",
-      relativePath: "/v1",
       isMainnet: false
     })
     const privateKey = crypto.getPrivateKeyFromMnemonic("giggle sibling fun arrow elevator spoon blood grocery laugh tortoise culture tool", '60')

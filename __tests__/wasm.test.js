@@ -19,7 +19,6 @@ describe("okb wasm test",  function() {
         jest.setTimeout(300000)
         const client = new OKBChainClient(serverUrl, {
             chainId: "okbchain-67",
-            relativePath: "/v1",
             isMainnet: false,
         })
         const privateKey = crypto.getPrivateKeyFromMnemonic(mnemonic, '60')
@@ -69,7 +68,6 @@ describe("okb wasm test",  function() {
     it('query tx', async function () {
         const client = new OKBChainClient(serverUrl, {
             chainId: "okbchain-67",
-            relativePath: "/v1",
             isMainnet: false,
         })
 
@@ -81,7 +79,6 @@ describe("okb wasm test",  function() {
 
         const client = new OKBChainClient(serverUrl, {
             chainId: "okbchain-67",
-            relativePath: "/v1",
             isMainnet: false,
         })
         const privateKey = crypto.getPrivateKeyFromMnemonic(mnemonic, '60')
@@ -114,7 +111,6 @@ describe("okb wasm test",  function() {
     it('execute contract',async function () {
         const client = new OKBChainClient(serverUrl, {
             chainId: "okbchain-67",
-            relativePath: "/v1",
             isMainnet: false,
         })
         const privateKey = crypto.getPrivateKeyFromMnemonic(mnemonic, '60')
@@ -146,7 +142,6 @@ describe("okb wasm test",  function() {
 
         const client = new OKBChainClient(serverUrl, {
             chainId: "okbchain-67",
-            relativePath: "/v1",
             isMainnet: false,
         })
         const privateKey = crypto.getPrivateKeyFromMnemonic(mnemonic, '60')
@@ -174,7 +169,6 @@ describe("okb wasm test",  function() {
     it('migrate contract', async function () {
         const client = new OKBChainClient(serverUrl, {
             chainId: "okbchain-67",
-            relativePath: "/v1",
             isMainnet: false,
         })
         const privateKey = crypto.getPrivateKeyFromMnemonic(mnemonic, '60')
@@ -200,7 +194,6 @@ describe("okb wasm test",  function() {
     it('update contract admin', async function () {
         const client = new OKBChainClient(serverUrl, {
             chainId: "okbchain-67",
-            relativePath: "/v1",
             isMainnet: false,
         })
         const privateKey = crypto.getPrivateKeyFromMnemonic(mnemonic, '60')
@@ -225,7 +218,6 @@ describe("okb wasm test",  function() {
     it('clear contract admin', async function () {
         const client = new OKBChainClient(serverUrl, {
             chainId: "okbchain-67",
-            relativePath: "/v1",
             isMainnet: false,
         })
         const privateKey = crypto.getPrivateKeyFromMnemonic(mnemonic2, '60')
@@ -251,7 +243,6 @@ describe("okb wasm test",  function() {
     it('query list code', async function () {
         const client = new OKBChainClient(serverUrl, {
             chainId: "okbchain-67",
-            relativePath: "/v1",
             isMainnet: false
         })
 
@@ -262,7 +253,6 @@ describe("okb wasm test",  function() {
     it('query code', async function () {
         const client = new OKBChainClient(serverUrl, {
             chainId: "okbchain-67",
-            relativePath: "/v1",
             isMainnet: false
         })
 
@@ -273,7 +263,6 @@ describe("okb wasm test",  function() {
     it('query list contracts', async function () {
         const client = new OKBChainClient(serverUrl, {
             chainId: "okbchain-67",
-            relativePath: "/v1",
             isMainnet: false
         })
 
@@ -284,7 +273,6 @@ describe("okb wasm test",  function() {
     it('query  contract', async function () {
         const client = new OKBChainClient(serverUrl, {
             chainId: "okbchain-67",
-            relativePath: "/v1",
             isMainnet: false
         })
 
@@ -295,7 +283,6 @@ describe("okb wasm test",  function() {
     it('query  contract history', async function () {
         const client = new OKBChainClient(serverUrl, {
             chainId: "okbchain-67",
-            relativePath: "/v1",
             isMainnet: false
         })
 
@@ -306,7 +293,6 @@ describe("okb wasm test",  function() {
     it('query contract state all', async function () {
         const client = new OKBChainClient(serverUrl, {
             chainId: "okbchain-67",
-            relativePath: "/v1",
             isMainnet: false
         })
 
@@ -317,7 +303,6 @@ describe("okb wasm test",  function() {
     it('query contract state smart', async function () {
         const client = new OKBChainClient(serverUrl, {
             chainId: "okbchain-67",
-            relativePath: "/v1",
             isMainnet: false
         })
 
@@ -328,7 +313,6 @@ describe("okb wasm test",  function() {
     it('query contract state raw', async function () {
         const client = new OKBChainClient(serverUrl, {
             chainId: "okbchain-67",
-            relativePath: "/v1",
             isMainnet: false
         })
 

@@ -91,7 +91,7 @@ export class OKBChainClient {
         this.queryAccountUrl = defaultRelativePath + "/auth/accounts"
         this.isMainnet = (config && config.isMainnet) || false
         this.signer = (config && config.signer) || null
-        this.restPrefix = config.relativePath
+        this.restPrefix = defaultRelativePath
 
         if (this.isMainnet) {
             defaultFee = defaultMainnetFee

@@ -15,7 +15,6 @@ describe("okb wasm test", async function() {
         jest.setTimeout(300000)
         const client = new OKBChainClient(serverUrl, {
             chainId: "okbchaintest-195",
-            relativePath: "/v1",
             isMainnet: false,
         })
 
@@ -43,7 +42,6 @@ describe("okb wasm test", async function() {
         jest.setTimeout(300000)
         const client = new OKBChainClient(serverUrl, {
             chainId: "okbchaintest-195",
-            relativePath: "/v1",
             isMainnet: false,
         })
 
@@ -69,7 +67,6 @@ describe("okb wasm test", async function() {
         jest.setTimeout(300000)
         const client = new OKBChainClient(serverUrl, {
             chainId: "okbchaintest-195",
-            relativePath: "v1",
             isMainnet: false,
         })
 
@@ -95,7 +92,6 @@ describe("okb wasm test", async function() {
         jest.setTimeout(300000)
         const client = new OKBChainClient(serverUrl, {
             chainId: "okbchaintest-195",
-            relativePath: "v1",
             isMainnet: false,
         })
 
@@ -107,7 +103,6 @@ describe("okb wasm test", async function() {
         jest.setTimeout(300000)
         const client = new OKBChainClient(serverUrl, {
             chainId: "okbchaintest-195",
-            relativePath: "v1",
             isMainnet: false,
         })
         const res = await client.queryDeployerFeeSplits(deployerAddress, 1, 100)
@@ -118,7 +113,6 @@ describe("okb wasm test", async function() {
         jest.setTimeout(300000)
         const client = new OKBChainClient(serverUrl, {
             chainId: "okbchaintest-195",
-            relativePath: "v1",
             isMainnet: false,
         })
 
