@@ -7,7 +7,6 @@
         * [.getHDPath](#module_crypto.getHDPath)
         * [.decodeAddressToBuffer](#module_crypto.decodeAddressToBuffer)
         * [.validateAddress](#module_crypto.validateAddress) ⇒ <code>boolean</code>
-        * [.encodeAddressToBech32](#module_crypto.encodeAddressToBech32) ⇒ <code>string</code>
         * [.convertBech32ToHex](#module_crypto.convertBech32ToHex) ⇒ <code>String</code>
         * [.convertHexToBech32](#module_crypto.convertHexToBech32) ⇒ <code>string</code>
         * [.generatePrivateKey](#module_crypto.generatePrivateKey) ⇒ <code>string</code>
@@ -65,9 +64,9 @@ Validate address.
 | --- | --- | --- |
 | addr | <code>string</code> | bech32 format |
 
-<a name="module_crypto.encodeAddressToBech32"></a>
+<a name="module_crypto.convertBech32ToHex"></a>
 
-### crypto.encodeAddressToBech32 ⇒ <code>string</code>
+### crypto.convertBech32ToHex ⇒ <code>string</code>
 Encodes address from hex to bech32 format.
 
 **Kind**: static constant of [<code>crypto</code>](#module_crypto)  
@@ -79,17 +78,6 @@ Encodes address from hex to bech32 format.
 | prefix | <code>string</code> | address prefix |
 
 <a name="module_crypto.convertBech32ToHex"></a>
-
-### crypto.convertBech32ToHex ⇒ <code>String</code>
-covert ex address to 0x address
-
-**Kind**: static constant of [<code>crypto</code>](#module_crypto)  
-
-| Param |
-| --- |
-| bech32Address | 
-
-<a name="module_crypto.convertHexToBech32"></a>
 
 ### crypto.convertHexToBech32 ⇒ <code>string</code>
 covert 0x address to ex address

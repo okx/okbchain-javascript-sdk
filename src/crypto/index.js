@@ -249,7 +249,7 @@ export const getAddressFromPubKey = (publicKey, prefix) => {
     const publicKey1 = Buffer.from(publicKey, 'hex')
     publicKey = Buffer.from(secp256k1.publicKeyConvert(new Uint8Array(publicKey1), false)).slice(1)
     const hash = createKeccakHash('keccak256').update(publicKey).digest()
-    return encodeAddressToBech32(hash.slice(-20).toString('hex'), prefix)
+    return convertHexToBech32(hash.slice(-20).toString('hex'), prefix)
 }
 
 export const getAddressFromPublicKeyLegacy = (publicKeyHex, prefix) => {

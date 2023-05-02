@@ -182,7 +182,7 @@ export class OKBChainClient {
     async sendSendTransaction(to, amount, denom, memo = "", sequenceNumber = null, isPrivatekeyOldAddress = 0) {
 
         if (to.slice(0, 2) === '0x') {
-            to = crypto.encodeAddressToBech32(to)
+            to = crypto.convertHexToBech32(to)
         }
 
         const coin = {
